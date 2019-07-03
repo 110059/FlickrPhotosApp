@@ -1,6 +1,6 @@
 # Start API Server:
 
->> cd photos-app-node-angular-express-bootstrap/api
+>> cd FlickrPhotosApp/api
 
 >> npm install
 
@@ -24,7 +24,7 @@ http://localhost:8080/flickr/photos?tags=singapore,usa
 
 # Start Angular UI Server
 
->> cd photos-app-node-angular-express-bootstrap/AngularUI
+>> cd FlickrPhotosApp/AngularUI
 
 >> npm install
 
