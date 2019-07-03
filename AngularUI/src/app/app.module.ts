@@ -7,6 +7,7 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ImageOnlyPipe } from './shared/image-only.pipe';
 
 const appRoutes: Routes = [ 
   { 
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     AppComponent,
     PhotoListComponent,
     PageNotFoundComponent,
-    NavBarComponent
+    NavBarComponent,
+    ImageOnlyPipe
   ],
   imports: [
     BrowserModule,    

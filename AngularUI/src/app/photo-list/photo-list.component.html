@@ -31,8 +31,8 @@
       </thead>
       <tbody>
         <tr *ngFor="let photo of photos">
-          <td>{{photo?.title[0]}}</td>
-          <td class="flckerImg"><img src="{{photo?.link[1]?.$?.href}}"  class="img-thumbnail"></td>
+          <td>{{photo?.title[0] || 'N.A'}}</td>
+          <td class="flckerImg"><img src="{{photo?.link | imageOnly}}"  class="img-thumbnail"></td>
         </tr>      
       </tbody>
     </table>
