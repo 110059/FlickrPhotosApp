@@ -2,7 +2,7 @@
 
 >> cd photos-app-node-angular-express-bootstrap/api
 
->> node main.js
+>> npm start
 
 # API 
 
