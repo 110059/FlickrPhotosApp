@@ -1,0 +1,41 @@
+<main role="main" class="container">
+  <div class="jumbotron">
+    <div class="row mx-1 my-1">
+      <form 
+          [formGroup]="searchForm" 
+          (ngSubmit)="onSubmit()" 
+          class="form-inline mt-2 mt-md-0"
+        >
+        <label for="tags" class="mr-1">Search using comma seperated tags: </label>
+        <input 
+          class="form-control mr-sm-2" 
+          type="text" 
+          placeholder="Search Photos" 
+          aria-label="Search"
+          formControlName="tags"
+        >
+        <button 
+           class="btn btn-outline-success my-2 my-sm-0" 
+           type="submit"
+           [disabled]="!searchForm.valid"
+           >Search           
+        </button>
+      </form>
+    </div>
+    <table *ngIf="photos.length; else noContent" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let photo of photos">
+          <td>{{photo?.title[0]}}</td>
+          <td class="flckerImg"><img src="{{photo?.link[1]?.$?.href}}"  class="img-thumbnail"></td>
+        </tr>      
+      </tbody>
+    </table>
+    <ng-template #noContent>No Images Found</ng-template>
+  </div>
+</main>
